@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, Input, Typography } from "@material-tailwind/react";
+import Link from "next/link";
 import React from "react";
 
 const Page = () => {
@@ -23,7 +24,9 @@ const Page = () => {
             />
           </div>
         </div>
-        <Button fullWidth>Signin</Button>
+        <Link className="w-full" href={"/home"}>
+          <Button fullWidth>Signin</Button>
+        </Link>
         <div className="w-full flex items-center justify-center">
           <hr className="w-full" />
           <Typography color="gray" className="w-full text-center">
