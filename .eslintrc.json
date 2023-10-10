@@ -24,7 +24,7 @@
     "plugin:@next/next/recommended"
   ],
   // Specifies the patterns to be ignored by ESLint
-  "ignorePatterns": [".eslintrc.js", ".stories.tsx"],
+  "ignorePatterns": [".eslintrc.js", ".stories.tsx", "next.config.js"],
   "rules": {
     // Configures the Prettier integration with ESLint
     // Disables the rule requiring an "I" prefix for interfaces
