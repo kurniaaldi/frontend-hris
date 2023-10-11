@@ -9,11 +9,13 @@ import {
   BuildingStorefrontIcon,
   BriefcaseIcon,
   ArrowLongRightIcon,
+  ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 /* eslint-disable @next/next/no-img-element */
 
 import {
   Avatar,
+  Button,
   Card,
   CardBody,
   CardFooter,
@@ -22,6 +24,10 @@ import {
   List,
   ListItem,
   ListItemPrefix,
+  Menu,
+  MenuHandler,
+  MenuItem,
+  MenuList,
   Tab,
   TabPanel,
   Tabs,
@@ -30,7 +36,10 @@ import {
   Tooltip,
   Typography,
 } from "@material-tailwind/react";
+import Image from "next/image";
 import React from "react";
+
+import Achieve from "@/assets/images/achieve.jpg";
 
 const Page = () => {
   const [activeTab, setActiveTab] = React.useState("html");
@@ -50,17 +59,66 @@ const Page = () => {
     },
   ];
   return (
-    <div className="space-y-8">
-      <div className="w-full h-80">
-        <Card className="mb-12 overflow-hidden relative">
-          <Typography className="absolute text-white z-10 top-1/2 right-1/2">
-            Ini Banner
-          </Typography>
-          <img
-            alt="nature"
-            className="h-full max-h-80 w-full object-cover object-center"
-            src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80"
-          />
+    <div className="flex items-start justify-start flex-col gap-8 w-full">
+      <div className="w-full h-full">
+        <Card className="overflow-hidden relative h-full w-full">
+          <div className="flex flex-col items-start justify-start p-8 gap-8">
+            <div className="mb-10 flex items-start justify-start gap-2 flex-col">
+              <Typography variant="h3">Good Morning, Reza</Typography>
+              <Typography>It's Tuesday, 10 October</Typography>
+            </div>
+            <div className="flex items-start justify-start gap-2 flex-col">
+              <Typography variant="small">shorcut</Typography>
+              <div className="flex items-start justify-center gap-4">
+                <Button
+                  variant="outlined"
+                  size="sm"
+                  className="rounded-full normal-case"
+                >
+                  Live Attendance
+                </Button>
+                <Button
+                  variant="outlined"
+                  size="sm"
+                  className="rounded-full normal-case"
+                >
+                  Request Reimbursement
+                </Button>
+                <Button
+                  variant="outlined"
+                  size="sm"
+                  className="rounded-full normal-case"
+                >
+                  Request time Off
+                </Button>
+                <Menu
+                  animate={{
+                    mount: { y: 0 },
+                    unmount: { y: 25 },
+                  }}
+                >
+                  <MenuHandler>
+                    <Button
+                      variant="outlined"
+                      size="sm"
+                      className="flex items-center gap-2 rounded-full normal-case"
+                    >
+                      More request <ChevronDownIcon className="w-4 h-4" />
+                    </Button>
+                  </MenuHandler>
+                  <MenuList>
+                    <MenuItem>Overtime</MenuItem>
+                    <MenuItem>Attendance</MenuItem>
+                    <MenuItem>Change shift</MenuItem>
+                  </MenuList>
+                </Menu>
+              </div>
+            </div>
+          </div>
+
+          <div className="right-0 absolute overflow-hidden bottom-0 h-full w-80">
+            <Image src={Achieve} alt={"work.png"} objectFit="fill" />
+          </div>
         </Card>
       </div>
       <div className="grid grid-cols-10 gap-4">
@@ -143,7 +201,7 @@ const Page = () => {
             </Carousel>
           </div>
           <Card>
-            <div className="shadow rounded px-2">
+            <div className="shadow rounded px-2 py-2">
               <Tabs value={activeTab}>
                 <TabsHeader
                   className="rounded-none border-b border-blue-gray-50 bg-transparent p-0"
