@@ -44,7 +44,7 @@ const Page = () => (
           </div>
         </div>
       </Card>
-      <div className="w-full max-w-lg rounded flex items-start justify-start flex-col gap-4 p-4">
+      <div className="w-full max-w-lg rounded flex items-start justify-start flex-col gap-4 py-4">
         <Typography variant="h4">Attendance log</Typography>
         <div className="flex items-center justify-between w-full border p-2 rounded">
           <div className="flex items-start justify-start gap-8">

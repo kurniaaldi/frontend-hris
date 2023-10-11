@@ -18,6 +18,7 @@ import {
   MenuItem,
   MenuList,
 } from "@material-tailwind/react";
+import Link from "next/link";
 import React from "react";
 
 const profileMenuItems = [
@@ -121,9 +122,9 @@ const HiLayout = ({ children }: { children: React.ReactNode }) => {
         color="blue-gray"
         className="flex items-center rounded-full"
       >
-        <a href="#" className="flex items-center">
+        <Link href="/dashboard" className="flex items-center">
           Dashboard
-        </a>
+        </Link>
       </Button>
       <Button
         variant="text"
