@@ -30,7 +30,7 @@
     // Disables the rule requiring an "I" prefix for interfaces
     "@typescript-eslint/interface-name-prefix": "off",
     // Configures the naming conventions for various code constructs
-
+    "react/no-unescaped-entities": "off",
     // Disables the rule requiring explicit return types for functions
     "@typescript-eslint/explicit-function-return-type": "off",
     // Disables the rule requiring explicit boundary types for modules
