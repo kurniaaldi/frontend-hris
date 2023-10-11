@@ -23,7 +23,7 @@ const Page = () => (
           />
         </div>
       </div>
-      <Link className="w-full" href={"/home"}>
+      <Link className="w-full" href={"/dashboard"}>
         <Button fullWidth>Signin</Button>
       </Link>
       <div className="w-full flex items-center justify-center">

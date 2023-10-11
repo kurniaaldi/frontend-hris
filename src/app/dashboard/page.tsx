@@ -37,6 +37,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 import Achieve from "@/assets/images/achieve.jpg";
@@ -71,13 +72,15 @@ const Page = () => {
             <div className="flex items-start justify-start gap-2 flex-col">
               <Typography variant="small">shorcut</Typography>
               <div className="flex items-start justify-center gap-4">
-                <Button
-                  variant="outlined"
-                  size="sm"
-                  className="rounded-full normal-case"
-                >
-                  Live Attendance
-                </Button>
+                <Link href="/live-attendance">
+                  <Button
+                    variant="outlined"
+                    size="sm"
+                    className="rounded-full normal-case"
+                  >
+                    Live Attendance
+                  </Button>
+                </Link>
                 <Button
                   variant="outlined"
                   size="sm"
