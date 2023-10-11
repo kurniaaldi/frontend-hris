@@ -43,6 +43,7 @@ import Achieve from "@/assets/images/achieve.jpg";
 
 const Page = () => {
   const [activeTab, setActiveTab] = React.useState("html");
+
   const data = [
     {
       label: "Announcement",
