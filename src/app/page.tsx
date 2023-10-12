@@ -1,6 +1,4 @@
-"use client";
-
-import { Button } from "@material-tailwind/react";
+import { Button } from "@/components/material";
 
 export default function Home() {
   return (
