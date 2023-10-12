@@ -73,7 +73,7 @@
         // Enforce newlines between different groups and inside groups of imports
         "newlines-between": "always-and-inside-groups",
         // Warn when there is an import statement that is not part of any group
-        "warnOnUnassignedImports": true
+        "warnOnUnassignedImports": false
       }
     ],
     // Disables the rule requiring prop types for React components
