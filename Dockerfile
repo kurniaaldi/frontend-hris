@@ -1,7 +1,8 @@
 FROM --platform=linux/amd64 node:18-buster-slim as builder-stage
 COPY package.json package.json
+COPY . .
+RUN npm install
 RUN yarn install
-ADD . .
 RUN yarn build
 
 FROM nginx:alpine as deploy-stage
