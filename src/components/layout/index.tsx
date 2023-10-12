@@ -131,9 +131,9 @@ const HiLayout = ({ children }: { children: React.ReactNode }) => {
         color="blue-gray"
         className="flex items-center rounded-full"
       >
-        <a href="#" className="flex items-center">
-          My Info
-        </a>
+        <Link href="/personal-info" className="flex items-center">
+          My info
+        </Link>
       </Button>
       <Button
         variant="text"
@@ -271,9 +271,7 @@ const HiLayout = ({ children }: { children: React.ReactNode }) => {
           </Button>
         </MobileNav>
       </Navbar>
-      <div className="mx-auto max-w-screen-xl py-12 min-h-screen">
-        {children}
-      </div>
+      <div className="mx-auto py-12 min-h-screen">{children}</div>
     </div>
   );
 };
