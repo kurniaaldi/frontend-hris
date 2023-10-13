@@ -3,6 +3,7 @@ import {
   UserIcon,
   ClockIcon,
   CreditCardIcon,
+  BanknotesIcon,
 } from "@heroicons/react/24/outline";
 import {
   List,
@@ -136,7 +137,7 @@ const ListSideBar = () => {
             className="border-b-0 p-3"
           >
             <ListItemPrefix>
-              <CreditCardIcon className="h-5 w-5" />
+              <BanknotesIcon className="h-5 w-5" />
             </ListItemPrefix>
             <Typography color="blue-gray" className="mr-auto font-normal">
               Finance

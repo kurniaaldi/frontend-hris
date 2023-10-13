@@ -19,7 +19,7 @@ const PhotoProfile = () => (
     </div>
     <div className="flex items-center justify-center flex-col mb-4">
       <Typography variant="lead">Reza Sofyan</Typography>
-      <Typography variant="small">Tech Lead (HO)</Typography>
+      <Typography variant="small">Software Lead (HO)</Typography>
     </div>
   </div>
 );

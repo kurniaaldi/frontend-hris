@@ -1,4 +1,4 @@
-import { Card, TabPanel, Typography } from "@material-tailwind/react";
+import { Button, Card, TabPanel, Typography } from "@material-tailwind/react";
 import React from "react";
 
 const ContentEmergencyContact = ({ value }: any) => {
@@ -33,6 +33,11 @@ const ContentEmergencyContact = ({ value }: any) => {
   ];
   return (
     <TabPanel key={value} value={value}>
+      <div className="flex items-center justify-end mb-4">
+        <Button variant="outlined" className="normal-case">
+          Request change data
+        </Button>
+      </div>
       <Card className="h-full w-full overflow-scroll">
         <table className="w-full min-w-max table-auto text-left">
           <thead>

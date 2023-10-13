@@ -21,7 +21,7 @@ import {
 } from "./_components";
 
 const Page = () => {
-  const [activeTab, setActiveTab] = React.useState("html");
+  const [activeTab, setActiveTab] = React.useState("basic");
   const data = [
     {
       label: "Basic Info",
