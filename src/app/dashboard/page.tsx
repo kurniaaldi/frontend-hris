@@ -133,12 +133,14 @@ const Page = () => {
                 Quick Links
               </Typography>
               <List className="min-w-fit p-0">
-                <ListItem className="text-sm">
-                  <ListItemPrefix>
-                    <UserCircleIcon className="h-4" />
-                  </ListItemPrefix>
-                  My Info
-                </ListItem>
+                <Link href="/personal-info">
+                  <ListItem className="text-sm">
+                    <ListItemPrefix>
+                      <UserCircleIcon className="h-4" />
+                    </ListItemPrefix>
+                    My Info
+                  </ListItem>
+                </Link>
                 <ListItem className="text-sm">
                   <ListItemPrefix>
                     <ClockIcon className="h-4" />
