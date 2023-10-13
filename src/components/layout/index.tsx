@@ -117,24 +117,24 @@ const HiLayout = ({ children }: { children: React.ReactNode }) => {
 
   const navListLeft = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Button
-        variant="text"
-        color="blue-gray"
-        className="flex items-center rounded-full"
-      >
-        <Link href="/dashboard" className="flex items-center">
+      <Link href="/dashboard" className="flex items-center">
+        <Button
+          variant="text"
+          color="blue-gray"
+          className="flex items-center rounded-full"
+        >
           Dashboard
-        </Link>
-      </Button>
-      <Button
-        variant="text"
-        color="blue-gray"
-        className="flex items-center rounded-full"
-      >
-        <Link href="/personal-info" className="flex items-center">
+        </Button>
+      </Link>
+      <Link href="/personal-info/profile" className="flex items-center">
+        <Button
+          variant="text"
+          color="blue-gray"
+          className="flex items-center rounded-full"
+        >
           My info
-        </Link>
-      </Button>
+        </Button>
+      </Link>
       <Button
         variant="text"
         color="blue-gray"

@@ -14,6 +14,7 @@ import {
   Typography,
   AccordionBody,
 } from "@material-tailwind/react";
+import Link from "next/link";
 import React from "react";
 
 const ListSideBar = () => {
@@ -50,8 +51,12 @@ const ListSideBar = () => {
         </ListItem>
         <AccordionBody className="py-1">
           <List className="pl-4">
-            <ListItem>Personal</ListItem>
-            <ListItem>Employment</ListItem>
+            <Link href="/personal-info/profile">
+              <ListItem>Personal</ListItem>
+            </Link>
+            <Link href="/personal-info/employment">
+              <ListItem>Employment</ListItem>
+            </Link>
             <ListItem>Education & Experience</ListItem>
             <ListItem>Additional info</ListItem>
           </List>
