@@ -60,7 +60,9 @@ const ListSideBar = () => {
             <Link href="/personal-info/experience">
               <ListItem>Education & Experience</ListItem>
             </Link>
-            <ListItem>Additional info</ListItem>
+            <Link href="/personal-info/additional-info">
+              <ListItem>Additional info</ListItem>
+            </Link>
           </List>
         </AccordionBody>
       </Accordion>
@@ -90,7 +92,9 @@ const ListSideBar = () => {
         </ListItem>
         <AccordionBody className="py-1">
           <List className="pl-4">
-            <ListItem>Attendance</ListItem>
+            <Link href="/personal-info/attendance">
+              <ListItem>Attendance</ListItem>
+            </Link>
             <ListItem>Timeoff</ListItem>
             <ListItem>Overtime</ListItem>
           </List>
