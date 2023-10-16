@@ -1,181 +1,201 @@
 "use client";
 
-import { PencilSquareIcon } from "@heroicons/react/24/outline";
-import { Button, Typography } from "@material-tailwind/react";
+import {
+  Tab,
+  TabPanel,
+  Tabs,
+  TabsBody,
+  TabsHeader,
+  Typography,
+} from "@material-tailwind/react";
 import React from "react";
 
-const Pages = () => (
-  <div>
-    <Typography variant="h3">Employment</Typography>
-    <div className="grid grid-cols-12 gap-8">
-      <div className="col-span-3">
-        <Typography>Personal data</Typography>
-        <Typography variant="small">
-          Your email address is your identity on Talenta is used to log in.
-        </Typography>
-      </div>
-      <div className="col-span-7 grid grid-cols-3 gap-2">
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Full name
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">Reza Sofyan</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Mobile phone
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">+62 852-1091-4854</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Email
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">reza.reza@paramatech.id</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Phone
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">+62 852-1091-4854</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Place of birth
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">banten</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Birthdate
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small"> 1 okt 1989 33 years old</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Gender
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">Male</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Marital status
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">PK</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Blood type
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">O</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Religion
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">Islam</Typography>
-        </div>
-      </div>
-      <div className="col-span-2 flex items-start justify-start">
-        <Button
-          variant="outlined"
-          size="sm"
-          className="flex items-center justify-center gap-2"
-        >
-          <PencilSquareIcon className="w-4 h-4" /> Edit
-        </Button>
-      </div>
-      <hr className="col-span-12" />
-      <div className="col-span-3">
-        <Typography>Identity & Address</Typography>
-      </div>
-      <div className="col-span-7 grid grid-cols-3 gap-2">
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            ID type
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">KTP</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            ID number
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">3201071606940006</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            ID expiration date
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">Permanent</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Postal code
-          </Typography>
-        </div>
-        <div className="col-span-2">
-          <Typography variant="small">16821</Typography>
-        </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Citizen ID address
-          </Typography>
-        </div>
-        <div className="col-span-2">
+const Pages = () => {
+  const [activeTab, setActiveTab] = React.useState("html");
+  const data = [
+    {
+      label: "Approve line",
+      value: "html",
+      desc: `It really matters and then like it really doesn't matter.
+      What matters is the people who are sparked by it. And the people 
+      who are like offended by it, it doesn't matter.`,
+    },
+    {
+      label: "Manager",
+      value: "react",
+      desc: `Because it's about motivating the doers. Because I'm here
+      to follow my dreams and inspire other people to follow their dreams, too.`,
+    },
+  ];
+  return (
+    <div>
+      <Typography variant="h3">Employment</Typography>
+      <div className="grid grid-cols-12 gap-8">
+        <div className="col-span-3">
+          <Typography>Personal data</Typography>
           <Typography variant="small">
-            Griya Alam Sentosa N 18/16 RT/RW 09/10 Kel. Pasirangin Kec.
-            Cileungsi Kab. Bogor
+            Your data information related to company.
           </Typography>
         </div>
-        <div className="col-span-1">
-          <Typography variant="small" className="font-semibold">
-            Residential address
-          </Typography>
+        <div className="col-span-9 grid grid-cols-3 gap-2">
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Company name
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">PT. Citta Parama Guna</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Employee ID
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">CPG21020030</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Barcode
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">-</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Organization name
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">Paramatech Head Office</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Job position
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">Software Developer (HO)</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Job level
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">Staff</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Employment status
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">Permanent</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Branch
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">Paramatech</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Join date
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">
+              12 Dec 2022 0 Year 10 Month 5 Day
+            </Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Sign date
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">-</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Grade
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">-</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Class
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">-</Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Approval line
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">
+              CPG21018888 - Achmad Michael
+            </Typography>
+          </div>
+          <div className="col-span-1">
+            <Typography variant="small" className="font-semibold">
+              Manager
+            </Typography>
+          </div>
+          <div className="col-span-2">
+            <Typography variant="small">
+              CPG21018888 - Achmad Michael
+            </Typography>
+          </div>
         </div>
-        <div className="col-span-2">
-          <Typography variant="small">
-            Perum Griya Alam Sentosa, Blok N 8 No. 1, RT. 007 RW. 010, Kel.
-            Pasirangin, Kec. Cileungsi, Kab. Bogor, Prov. Jawa Barat
-          </Typography>
+
+        <hr className="col-span-12" />
+        <div className="col-span-3">
+          <Typography>Subordinate</Typography>
         </div>
-      </div>
-      <div className="col-span-2 flex items-start justify-start">
-        <Button
-          variant="outlined"
-          size="sm"
-          className="flex items-center justify-center gap-2"
-        >
-          <PencilSquareIcon className="w-4 h-4" /> Edit
-        </Button>
+        <div className="col-span-9 w-full">
+          <Tabs value={activeTab}>
+            <TabsHeader
+              className="rounded-none border-b border-blue-gray-50 bg-transparent p-0"
+              indicatorProps={{
+                className:
+                  "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
+              }}
+            >
+              {data.map(({ label, value }) => (
+                <Tab
+                  key={value}
+                  value={value}
+                  onClick={() => setActiveTab(value)}
+                  className={`${
+                    activeTab === value ? "text-gray-900" : ""
+                  } w-fit px-14 py-2`}
+                >
+                  {label}
+                </Tab>
+              ))}
+            </TabsHeader>
+            <TabsBody>
+              {data.map(({ value, desc }) => (
+                <TabPanel key={value} value={value}>
+                  {desc}
+                </TabPanel>
+              ))}
+            </TabsBody>
+          </Tabs>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Pages;
