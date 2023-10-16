@@ -95,8 +95,12 @@ const ListSideBar = () => {
             <Link href="/personal-info/attendance">
               <ListItem>Attendance</ListItem>
             </Link>
-            <ListItem>Timeoff</ListItem>
-            <ListItem>Overtime</ListItem>
+            <Link href="/personal-info/time-off">
+              <ListItem>Timeoff</ListItem>
+            </Link>
+            <Link href="/personal-info/overtime">
+              <ListItem>Overtime</ListItem>
+            </Link>
           </List>
         </AccordionBody>
       </Accordion>
