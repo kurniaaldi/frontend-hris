@@ -242,17 +242,6 @@ const Page = () => {
             </Card>
             <div className="w-full flex flex-col gap-2">
               <Card className="w-full overflow-hidden">
-                <CardHeader
-                  floated={false}
-                  shadow={false}
-                  color="transparent"
-                  className="m-0 rounded-none"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-                    alt="ui/ux review check"
-                  />
-                </CardHeader>
                 <CardBody>
                   <Typography variant="h4" color="blue-gray">
                     UI/UX Review Check
@@ -266,6 +255,26 @@ const Page = () => {
                     I&apos;m here to follow my dreams and inspire others.
                   </Typography>
                 </CardBody>
+                <CardHeader
+                  floated={false}
+                  shadow={false}
+                  color="transparent"
+                  className="m-0 rounded-none"
+                >
+                  <div className="relative overflow-hidden w-full h-96">
+                    <Image
+                      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                      alt="ui/ux review check"
+                      fill
+                      objectFit="cover"
+                    />
+                  </div>
+                  {/* <img
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                    alt="ui/ux review check"
+                  /> */}
+                </CardHeader>
+
                 <CardFooter className="flex items-center justify-between">
                   <div className="flex items-center -space-x-3">
                     <Tooltip content="Natali Craig">

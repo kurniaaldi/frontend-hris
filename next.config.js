@@ -1,7 +1,6 @@
-const withReactSvg = require("next-react-svg");
 const path = require("path");
 
-module.exports = withReactSvg({
+module.exports = {
   reactStrictMode: true,
   compress: true,
   include: path.resolve(__dirname, "src/assets"),
@@ -16,6 +15,15 @@ module.exports = withReactSvg({
 
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+    minimumCacheTTL: 1500000,
+  },
   //   images: {
   //     domains: ["assets.nbatopshot.com", "45.77.252.22"],
   //   },
@@ -27,4 +35,4 @@ module.exports = withReactSvg({
   //       },
   //     ];
   //   },
-});
+};
