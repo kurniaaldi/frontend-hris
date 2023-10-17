@@ -4,8 +4,6 @@ import { Button, Card, Textarea, Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import React from "react";
 
-import Attendance from "@/assets/images/attendance.jpg";
-
 const Page = () => (
   <div className="max-w-screen-2xl mx-auto">
     <div className="flex items-start justify-start flex-col gap-8 w-full max-w-screen-2xl">
@@ -60,8 +58,13 @@ const Page = () => (
             </Button>
           </div>
           <div className="flex items-center justify-center flex-col w-full gap-2">
-            <div className="overflow-hidden h-full w-80">
-              <Image src={Attendance} alt={"work.png"} objectFit="fill" />
+            <div className="relative overflow-hidden h-80 w-80">
+              <Image
+                src={"/images/attendance.jpg"}
+                alt={"work.png"}
+                objectFit="fill"
+                fill
+              />
             </div>
             <Typography>No attendance log today</Typography>
             <Typography>

@@ -40,8 +40,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import Achieve from "@/assets/images/achieve.jpg";
-
 const Page = () => {
   const [activeTab, setActiveTab] = React.useState("html");
 
@@ -122,7 +120,12 @@ const Page = () => {
             </div>
 
             <div className="right-0 absolute overflow-hidden bottom-0 h-full w-80">
-              <Image src={Achieve} alt={"work.png"} objectFit="fill" />
+              <Image
+                src={"/images/achieve.jpg"}
+                alt={"work.png"}
+                fill
+                objectFit="fill"
+              />
             </div>
           </Card>
         </div>
