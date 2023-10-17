@@ -38,7 +38,9 @@ import {
 } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+
+import { locateCurrentPosition } from "@/utils/constant";
 
 const Page = () => {
   const [activeTab, setActiveTab] = React.useState("html");
@@ -58,6 +60,11 @@ const Page = () => {
       to follow my dreams and inspire other people to follow their dreams, too.`,
     },
   ];
+
+  useEffect(() => {
+    locateCurrentPosition();
+  }, []);
+
   return (
     <div className="max-w-screen-2xl mx-auto">
       <div className="flex items-start justify-start flex-col gap-8 w-full">
