@@ -7,7 +7,7 @@ import React from "react";
 import { useDate } from "@/utils/constant";
 
 const Page = () => {
-  const { time, fullDate } = useDate();
+  const { hour, minutes, ampm, fullDate } = useDate();
 
   return (
     <div className="max-w-screen-2xl mx-auto">
@@ -19,7 +19,9 @@ const Page = () => {
           <Card className="shadow w-full max-w-lg rounded flex items-center justify-center flex-col gap-4">
             <div className="p-8 space-y-4">
               <Typography className="text-center" variant="lead">
-                {time}
+                {hour}
+                <span className="blink-2">:</span>
+                {minutes} {ampm}
               </Typography>
               <Typography className="text-center" variant="small">
                 {fullDate}

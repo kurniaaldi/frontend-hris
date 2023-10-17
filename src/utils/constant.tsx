@@ -57,6 +57,9 @@ export const useDate = () => {
   )}\n\n`;
 
   const hour = today.getHours();
+  const minutes = today.getMinutes();
+  const ampm = hour >= 12 ? "pm" : "am";
+
   const year = today.getFullYear();
   // const hour = today.getHours();
   const wish = `Good ${
@@ -64,7 +67,7 @@ export const useDate = () => {
   }, `;
 
   const time = today.toLocaleTimeString(locale, {
-    hour: "numeric",
+    hour: "2-digit",
     hour12: true,
     minute: "numeric",
   });
@@ -79,6 +82,9 @@ export const useDate = () => {
   return {
     date,
     time,
+    hour,
+    minutes,
+    ampm,
     fullDate,
     wish,
   };
