@@ -40,10 +40,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 
-import { locateCurrentPosition } from "@/utils/constant";
+import { locateCurrentPosition, useDate } from "@/utils/constant";
 
 const Page = () => {
   const [activeTab, setActiveTab] = React.useState("html");
+
+  const { date, wish } = useDate();
 
   const data = [
     {
@@ -72,8 +74,8 @@ const Page = () => {
           <Card className="overflow-hidden relative h-full w-full">
             <div className="flex flex-col items-start justify-start p-8 gap-8">
               <div className="mb-10 flex items-start justify-start gap-2 flex-col">
-                <Typography variant="h3">Good Morning, Reza</Typography>
-                <Typography>It's Tuesday, 10 October</Typography>
+                <Typography variant="h3">{wish} Reza</Typography>
+                <Typography> {date}</Typography>
               </div>
               <div className="flex items-start justify-start gap-2 flex-col">
                 <Typography variant="small">shorcut</Typography>
