@@ -18,6 +18,7 @@ import {
   MenuItem,
   MenuList,
 } from "@material-tailwind/react";
+import Link from "next/link";
 import React from "react";
 
 const profileMenuItems = [
@@ -116,24 +117,24 @@ const HiLayout = ({ children }: { children: React.ReactNode }) => {
 
   const navListLeft = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Button
-        variant="text"
-        color="blue-gray"
-        className="flex items-center rounded-full"
-      >
-        <a href="#" className="flex items-center">
+      <Link href="/dashboard" className="flex items-center">
+        <Button
+          variant="text"
+          color="blue-gray"
+          className="flex items-center rounded-full"
+        >
           Dashboard
-        </a>
-      </Button>
-      <Button
-        variant="text"
-        color="blue-gray"
-        className="flex items-center rounded-full"
-      >
-        <a href="#" className="flex items-center">
-          My Info
-        </a>
-      </Button>
+        </Button>
+      </Link>
+      <Link href="/personal-info/profile" className="flex items-center">
+        <Button
+          variant="text"
+          color="blue-gray"
+          className="flex items-center rounded-full"
+        >
+          My info
+        </Button>
+      </Link>
       <Button
         variant="text"
         color="blue-gray"
@@ -270,9 +271,7 @@ const HiLayout = ({ children }: { children: React.ReactNode }) => {
           </Button>
         </MobileNav>
       </Navbar>
-      <div className="mx-auto max-w-screen-xl py-12 min-h-screen">
-        {children}
-      </div>
+      <div className="mx-auto py-12 min-h-screen">{children}</div>
     </div>
   );
 };

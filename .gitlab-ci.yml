@@ -1,0 +1,9 @@
+variables:
+  APP_NAME: frontend-hris-web
+
+trigger_job:
+  trigger:
+    include:
+      - project: paramatech-unilever/hris/devops
+        ref: main
+        file: /gitlab-ci/.gitlab-ci.yaml
