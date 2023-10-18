@@ -130,8 +130,12 @@ const ListSideBar = () => {
         </ListItem>
         <AccordionBody className="py-1">
           <List className="pl-4">
-            <ListItem>Payroll Info</ListItem>
-            <ListItem>Payslip</ListItem>
+            <Link href="/personal-info/payroll-info">
+              <ListItem>Payroll Info</ListItem>
+            </Link>
+            <Link href="/personal-info/payslip">
+              <ListItem>Payslip</ListItem>
+            </Link>
           </List>
         </AccordionBody>
       </Accordion>

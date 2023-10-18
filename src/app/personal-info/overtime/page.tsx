@@ -32,10 +32,7 @@ const Pages = () => {
   return (
     <div className="space-y-4">
       <div className="flex flex-col">
-        <Typography variant="h3">Your attendance information</Typography>
-        <Typography variant="small" className="font-bold italic">
-          This is a summary of your attendance information
-        </Typography>
+        <Typography variant="h3">Your overtime information</Typography>
       </div>
       <div className="flex items-center justify-start gap-2 w-full py-4">
         <Button variant="outlined" size="sm">
