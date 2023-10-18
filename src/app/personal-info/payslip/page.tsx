@@ -133,8 +133,8 @@ const Page = () => {
             key={item.id}
             className="h-fit w-full grid grid-cols-5 items-center shadow-md p-4 py-2 border"
           >
-            <Typography className="font-bold ">{item.period_name}</Typography>
-            <Typography className="font-bold ">
+            <Typography>{item.period_name}</Typography>
+            <Typography>
               {item.cutoff_from} - {item.cutoff_to}
             </Typography>
 
