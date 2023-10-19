@@ -1,8 +1,6 @@
 import {
-  UserCircleIcon,
   ChevronDownIcon,
   Cog6ToothIcon,
-  InboxArrowDownIcon,
   LifebuoyIcon,
   PowerIcon,
 } from "@heroicons/react/24/outline";
@@ -19,20 +17,13 @@ import {
   MenuList,
 } from "@material-tailwind/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const profileMenuItems = [
   {
-    label: "My Profile",
-    icon: UserCircleIcon,
-  },
-  {
-    label: "Edit Profile",
+    label: "Setting",
     icon: Cog6ToothIcon,
-  },
-  {
-    label: "Inbox",
-    icon: InboxArrowDownIcon,
   },
   {
     label: "Help",
@@ -46,8 +37,12 @@ const profileMenuItems = [
 
 function ProfileMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const router = useRouter();
 
-  const closeMenu = () => setIsMenuOpen(false);
+  const closeMenu = (menu: string) => {
+    if (menu === "Setting") router.push("/setting");
+    setIsMenuOpen(false);
+  };
 
   return (
     <Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
@@ -78,7 +73,7 @@ function ProfileMenu() {
           return (
             <MenuItem
               key={label}
-              onClick={closeMenu}
+              onClick={() => closeMenu(label)}
               className={`flex items-center gap-2 rounded ${
                 isLastItem
                   ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
