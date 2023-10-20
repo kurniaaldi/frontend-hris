@@ -1,6 +1,7 @@
 import {
   ChevronDownIcon,
   Cog6ToothIcon,
+  Cog8ToothIcon,
   LifebuoyIcon,
   PowerIcon,
 } from "@heroicons/react/24/outline";
@@ -22,15 +23,23 @@ import React from "react";
 
 const profileMenuItems = [
   {
-    label: "Setting",
+    label: "Setting Account",
+    value: "settingAccount",
     icon: Cog6ToothIcon,
   },
   {
+    label: "Setting Advance",
+    value: "setting",
+    icon: Cog8ToothIcon,
+  },
+  {
     label: "Help",
+    value: "help",
     icon: LifebuoyIcon,
   },
   {
     label: "Sign Out",
+    value: "signOut",
     icon: PowerIcon,
   },
 ];
@@ -40,7 +49,11 @@ function ProfileMenu() {
   const router = useRouter();
 
   const closeMenu = (menu: string) => {
-    if (menu === "Setting") router.push("/setting");
+    if (menu === "settingAccount") {
+      router.push("/account");
+    } else if (menu === "setting") {
+      router.push("/setting");
+    }
     setIsMenuOpen(false);
   };
 
@@ -68,12 +81,12 @@ function ProfileMenu() {
         </Button>
       </MenuHandler>
       <MenuList className="p-1">
-        {profileMenuItems.map(({ label, icon }, key) => {
+        {profileMenuItems.map(({ label, icon, value }, key) => {
           const isLastItem = key === profileMenuItems.length - 1;
           return (
             <MenuItem
               key={label}
-              onClick={() => closeMenu(label)}
+              onClick={() => closeMenu(value)}
               className={`flex items-center gap-2 rounded ${
                 isLastItem
                   ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
